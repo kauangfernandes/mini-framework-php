@@ -1,4 +1,4 @@
-# mine-framework
+# Mine Framework
 
 O que é o Mine Framework?
 O Mine Framework é um framework PHP leve e modular que facilita o desenvolvimento de aplicações web robustas e escaláveis. 

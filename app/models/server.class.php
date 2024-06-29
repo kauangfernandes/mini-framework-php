@@ -14,6 +14,14 @@
             $path = substr($path, strpos($path, "/", 1));
             return $path;
         }
+
+        public static function getServerNameHttp(){
+            return $_SERVER['SERVER_NAME'];
+        }
+
+        public static function getServerPortHttp(){
+            return $_SERVER['SERVER_PORT'];
+        }
         
     }
 

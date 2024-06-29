@@ -1,5 +1,4 @@
 <?php
-
     class Server{
         public static function getServerAll(){
             return $_SERVER;

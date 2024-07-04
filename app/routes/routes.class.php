@@ -1,43 +1,53 @@
 <?php
 
     class Routes{
-        protected static array $routes = array();
-        protected static string $method = "";
-        protected static string $path = "";
 
-        public static function getRoutes(){
-            return self::$routes;
+        public function __construct(
+            private array $routes = array(),
+            private string $method = "",
+            private string $path = ""
+        ){
+            $this->initRoutes();
+            $this->startInstancia();
         }
 
-        public static function get(string $path, array $dados){
-            self::$routes['GET'][$path] = $dados;
+        private function getRoutes(){
+            return $this->routes;
         }
 
-        public static function post(string $path, array $dados){
-            self::$routes['POST'][$path] = $dados;
+        private function getHttp(string $path, array $dados){
+            $this->routes['GET'][$path] = $dados;
         }
 
-        public static function runRoutes(){
+        private function postHttp(string $path, array $dados){
+            $this->routes['POST'][$path] = $dados;
+        }
+
+        private function initRoutes(){
+            $this->getHttp("/", [indexController::class, "index"]);
+            $this->getHttp("/login", [exemploController::class, "login"]);
+            $this->postHttp("/login", [exemploController::class, "Altenticar"]);
+        }
+
+        private function runRoutes(){
             $server = Server::getInstancia();
 
-            self::$method = $server->getMethodHttp();
-            self::$path = $server->getPathHtpp();
+            $this->method = $server->getMethodHttp();
+            $this->path = $server->getPathHtpp();
 
-            if(isset(self::$routes[self::$method][self::$path])){
-                return self::$routes[self::$method][self::$path];
+            if(isset($this->routes[$this->method][$this->path])){
+                return $this->routes[$this->method][$this->path];
             } else {
                 return exit("Rota não conhecida.");
             }
         }
 
-        public static function startInstance(){
-            $route = self::runRoutes();
+        private function startInstancia(){
+            $route = $this->runRoutes();
             $controller = $route[0];
             $action = $route[1];
             $controller = new $controller;
             $controller->$action();
         }
     }
-
-    require_once "web/web.php";
 ?>

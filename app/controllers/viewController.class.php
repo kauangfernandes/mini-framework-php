@@ -10,13 +10,12 @@
             protected $results = null,
             protected $object = null
         ){
-            $this->object = new stdClass();
+            $this->object = new \stdClass();
         }
 
         public function getTitle(): string{
             return $this->title;
         }
-
 
         public function setTitle(string $title){
             $this->title = $title;

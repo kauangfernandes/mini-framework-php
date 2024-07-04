@@ -18,8 +18,10 @@
         }
 
         public static function runRoutes(){
-            self::$method = Server::getMethodHttp();
-            self::$path = Server::getPathHtpp();
+            $server = Server::getInstancia();
+
+            self::$method = $server->getMethodHttp();
+            self::$path = $server->getPathHtpp();
 
             if(isset(self::$routes[self::$method][self::$path])){
                 return self::$routes[self::$method][self::$path];

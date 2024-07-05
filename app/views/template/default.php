@@ -18,9 +18,10 @@
             }
         }
     ?>
+
+    <link rel="shortcut icon" href="/storage/icon/" type="image/x-icon">
     
-    
-    <title><?php echo $title ?></title>
+    <title><?php echo $title." | ".$nameApp?></title>
 </head>
 <body>
     <?php require_once "header.php"; ?>

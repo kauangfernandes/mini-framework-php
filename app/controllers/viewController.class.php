@@ -3,6 +3,7 @@
     class viewController{
         public function __construct(
             protected string $title = "",
+            protected string $nameApp = "Framework",
             protected string $template = "default",
             protected string $page = "not_found",
             protected array $css = array("styles"),
@@ -11,6 +12,25 @@
             protected $object = null
         ){
             $this->object = new \stdClass();
+        }
+
+        public function render(){
+            if(isset($this->page) AND $this->page != "not_found"){
+
+                $title = $this->title;
+                $nameApp = $this->nameApp;
+                $page = $this->page;
+                $css = $this->css;
+                $js = $this->js;
+                $results = $this->results;
+                $object = $this->object;
+                
+            } else {
+                $page = "not_found";
+                $title = "Erro 404";
+            }
+
+            require_once "../app/views/template/{$this->template}.php";
         }
 
         public function getTitle(): string{
@@ -67,24 +87,6 @@
 
         public function setObject($object){
             $this->object = $object;
-        }
-
-        public function render(){
-            if(isset($this->page) AND $this->page != "not_found"){
-
-                $css = $this->css;
-                $js = $this->js;
-                $object = $this->object;
-                $results = $this->results;
-                $page = $this->page;
-                $title = $this->title;
-
-            } else {
-                $page = "not_found";
-                $title = "Erro 404";
-            }
-
-            require_once "../app/views/template/{$this->template}.php";
         }
     }
 

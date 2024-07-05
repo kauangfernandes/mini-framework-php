@@ -25,12 +25,12 @@
 
         private function initRoutes(){
             $this->getHttp("/", [indexController::class, "index"]);
-            $this->getHttp("/login", [exemploController::class, "login"]);
-            $this->postHttp("/login", [exemploController::class, "Altenticar"]);
+            //$this->getHttp("/login", [exemploController::class, "login"]);
+            //$this->postHttp("/login", [exemploController::class, "Altenticar"]);
         }
 
         private function runRoutes(){
-            $server = Server::getInstancia();
+            $server = new Server;
 
             $this->method = $server->getMethodHttp();
             $this->path = $server->getPathHtpp();

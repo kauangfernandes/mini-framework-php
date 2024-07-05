@@ -1,15 +1,6 @@
 <?php
     class Server{
-        protected static $instance;
-        
-        private function __construct(){}
-
-        public static function getInstancia(){
-            if(is_null(self::$instance)){
-                self::$instance = new Server();
-            }
-            return self::$instance;
-        }
+        public function __construct(){}
 
         public function getServerAll(){
             return $_SERVER;

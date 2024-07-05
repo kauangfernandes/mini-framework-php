@@ -5,8 +5,8 @@
             protected string $title = "",
             protected string $template = "default",
             protected string $page = "not_found",
-            protected array $css = array(),
-            protected array $js = array(),
+            protected array $css = array("styles"),
+            protected array $js = array("index"),
             protected $results = null,
             protected $object = null
         ){
@@ -41,7 +41,7 @@
             return $this->css;
         }
 
-        public function setCss(array $css){
+        public function setCss(string $css){
             $this->css[] = $css;
         }
 

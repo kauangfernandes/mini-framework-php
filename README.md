@@ -45,14 +45,11 @@ Exemplo:
     <li><code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code></li>
 </ul>
 
-
-
-
 Use o código com cuidado.<br>
 Observações:
 
 Métodos HTTP suportados: GET e POST.
-Nome do Controller: Utilize o nome completo da classe do controller, incluindo namespace (se houver).
+Nome do Controller: Utilize o nome completo da classe do controller.
 Nome da Função: Utilize o nome exato da função que você deseja chamar dentro do controller.
 Adicionando um novo controller e renderizando o conteúdo:
 

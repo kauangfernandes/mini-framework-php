@@ -27,3 +27,22 @@ Este projeto teve como princípio o desenvolvimento de uma estrutura básica par
     <li>Htaccess: Redirecionamento e reescrita de URL, configurando o APACHE no projeto. Permite o redirecionamento de qualquer URL para o arquivo index.php.</li>
     <li>Reutilização de layout: Criação de um layout padrão para as views, evitando reescrever o mesmo código várias vezes.</li>
 <ul>
+
+
+<h3>Como usar:</h3>
+
+<ol>
+    <li>Adicionando uma rota:<li>
+        <ul>
+            <li>
+                Para adicionar uma nova rota no seu projeto, siga estes passos:
+                Acesse o arquivo routes.class.php dentro da pasta rotes.
+            </li>
+        </ul>
+    <li>Adicionando um novo controller e renderizando o conteúdo:</li>
+        <ul>
+            <li>
+                Para criar um novo controller que tenha a capacidade de renderizar o conteúdo, siga estes passos:
+            </li>
+        </ul>
+</ol>

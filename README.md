@@ -33,12 +33,15 @@ Este projeto teve como princípio o desenvolvimento de uma estrutura básica par
 
 <ol>
     <li>Adicionando uma rota:<li>
+    <li>
         <ul>
             <li>
                 Para adicionar uma nova rota no seu projeto, siga estes passos:
                 Acesse o arquivo routes.class.php dentro da pasta rotes.
             </li>
         </ul>
+    </li>
+
     <li>Adicionando um novo controller e renderizando o conteúdo:</li>
         <ul>
             <li>

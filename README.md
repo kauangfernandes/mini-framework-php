@@ -13,17 +13,29 @@
 </p>
 
 
-Funcionalidades
+<h3>Funcionalidades</h3>
+<ul>
+    <li>Autoloader: Carregamento de classes automático, sem necessidade de importação manual.</li>
+    <li>Rotas: Definição de qual controller deve ser instanciado e qual função deve ser acessada.</li>
+    <li>Htaccess: Redirecionamento e reescrita de URL, configurando o APACHE no projeto. Permite o redirecionamento de qualquer URL para o arquivo index.php.</li>
+    <li>Reutilização de layout: Criação de um layout padrão para as views, evitando reescrever o mesmo código várias vezes.</li>
+    <li>MVC: Arquitetura Model-View-Controller para organização e separação de responsabilidades.</li>
+    <li>POO/OO: Paradigma de Programação Orientada a Objetos para reutilização de código e flexibilidade.</li>
+    <li>PDO: Data Access Object para acesso a bancos de dados de forma segura e eficiente.</li>
+    <li>
+        Singleton: Padrão de projeto para garantir que apenas uma instância de uma classe seja criada.
+        Como usar
+    </li>
+</ul>
 
-Autoloader: Carregamento de classes automático, sem necessidade de importação manual.
-Rotas: Definição de qual controller deve ser instanciado e qual função deve ser acessada.
-Htaccess: Redirecionamento e reescrita de URL, configurando o APACHE no projeto. Permite o redirecionamento de qualquer URL para o arquivo index.php.
-Reutilização de layout: Criação de um layout padrão para as views, evitando reescrever o mesmo código várias vezes.
-MVC: Arquitetura Model-View-Controller para organização e separação de responsabilidades.
-POO/OO: Paradigma de Programação Orientada a Objetos para reutilização de código e flexibilidade.
-PDO: Data Access Object para acesso a bancos de dados de forma segura e eficiente.
-Singleton: Padrão de projeto para garantir que apenas uma instância de uma classe seja criada.
-Como usar
+
+
+
+
+
+
+
+
 
 Adicionando uma rota:
 
@@ -33,14 +45,14 @@ Acesse o arquivo routes.class.php dentro da pasta rotes.
 Localize a função initRoutes().
 Adicione sua nova rota utilizando a sintaxe a seguir:
 
-<p>PHP</p><br>
+<p>PHP</p>
 <code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code>
 
 Use o código com cuidado.
 content_copy
 Exemplo:
 
-<p>PHP</p><br>
+<p>PHP</p>
 <code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code><br>
 <code>$this->getHttp("/login", [ExemploController::class, "login"]);</code><br>
 <code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code><br>

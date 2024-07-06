@@ -49,16 +49,16 @@ Use o código com cuidado.<br>
 Observações:
 
 Métodos HTTP suportados: GET e POST.
-Nome do Controller: Utilize o nome completo da classe do controller.
+
+<p>Nome do Controller: Utilize o nome completo da classe do controller.
 Nome da Função: Utilize o nome exato da função que você deseja chamar dentro do controller.
 Adicionando um novo controller e renderizando o conteúdo:
-
 Para criar um novo controller que tenha a capacidade de renderizar o conteúdo, siga estes passos:
-
-Crie um novo arquivo PHP dentro da pasta controllers com o nome do seu controller (ex: ExemploController.php).
+Crie um novo arquivo PHP dentro da pasta controllers com o nome do seu controller (ex: ExemploController.class.php).
 Declare a classe do seu controller, extendendo a classe base ViewController:
-PHP
+</p>
 
+PHP
 <code>class ExemploController extends ViewController{}</code>
 
 Use o código com cuidado.

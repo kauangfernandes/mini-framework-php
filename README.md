@@ -39,9 +39,14 @@ Use o código com cuidado.<br>
 Exemplo:
 
 <p>PHP</p>
-<code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code><br>
-<code>$this->getHttp("/login", [ExemploController::class, "login"]);</code><br>
-<code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code><br>
+<ul>
+    <li><code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code></li>
+    <li><code>$this->getHttp("/login", [ExemploController::class, "login"]);</code></li>
+    <li><code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code></li>
+</ul>
+
+
+
 
 Use o código com cuidado.<br>
 Observações:

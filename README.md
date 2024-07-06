@@ -35,8 +35,7 @@ Adicione sua nova rota utilizando a sintaxe a seguir:
 <p>PHP</p>
 <code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code>
 
-Use o código com cuidado.
-content_copy
+Use o código com cuidado.<br>
 Exemplo:
 
 <p>PHP</p>
@@ -44,8 +43,7 @@ Exemplo:
 <code>$this->getHttp("/login", [ExemploController::class, "login"]);</code><br>
 <code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code><br>
 
-Use o código com cuidado.
-content_copy
+Use o código com cuidado.<br>
 Observações:
 
 Métodos HTTP suportados: GET e POST.
@@ -62,22 +60,19 @@ PHP
 <code>class ExemploController extends ViewController{}</code>
 
 Use o código com cuidado.
-content_copy
 Implemente as funções do seu controller que serão responsáveis por processar as requisições e retornar o conteúdo a ser renderizado.
 Para renderizar o conteúdo na view, utilize o método render():
 
 PHP
 <code>$this->render('nomeDaView', ['dados' => $seusDados]);</code>
 
-Use o código com cuidado.
-content_copy
+Use o código com cuidado.<br>
 Exemplo:
 
 PHP
-<code>class ExemploController extends ViewController{ public function login() { $this->render(); } }content_copy</code>
+<code>class ExemploController extends ViewController{ public function login() { $this->render(); } }</code>
 
-Use o código com cuidado.
-content_copy
+Use o código com cuidado.<br>
 Observações:
 
 Nome da View: Utilize o nome do arquivo da view sem a extensão .php (ex: login).

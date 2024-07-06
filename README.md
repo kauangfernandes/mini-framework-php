@@ -74,7 +74,7 @@ content_copy
 Exemplo:
 
 PHP
-<code>class ExemploController extends ViewController{ public function login() { $this->render(); } }</code>
+<code>class ExemploController extends ViewController{ public function login() { $this->render(); } }content_copy</code>
 
 Use o código com cuidado.
 content_copy

@@ -1,5 +1,4 @@
 <h2>Introdução</h2>
-
 <p>
     O Mini Framework é um framework PHP leve e básico que facilita o desenvolvimento de aplicações web. 
     Inspirado em Padrões de Projetos como POO (Programação Orientada a Objetos) e MVC (Model-View-Controller), 
@@ -7,13 +6,12 @@
 </p>
 
 <h2>Objetivo(s)</h2>
-
 <p>
     Este projeto teve como princípio o desenvolvimento de uma estrutura básica para a criação de outras aplicações.
 </p>
 
 
-<h3>Funcionalidades</h3>
+<h2>Funcionalidades</h2>
 <ul>
     <li>Autoloader: Carregamento de classes automático, sem necessidade de importação manual.</li>
     <li>Rotas: Definição de qual controller deve ser instanciado e qual função deve ser acessada.</li>
@@ -22,21 +20,10 @@
     <li>MVC: Arquitetura Model-View-Controller para organização e separação de responsabilidades.</li>
     <li>POO/OO: Paradigma de Programação Orientada a Objetos para reutilização de código e flexibilidade.</li>
     <li>PDO: Data Access Object para acesso a bancos de dados de forma segura e eficiente.</li>
-    <li>
-        Singleton: Padrão de projeto para garantir que apenas uma instância de uma classe seja criada.
-        Como usar
-    </li>
+    <li>Singleton: Padrão de projeto para garantir que apenas uma instância de uma classe seja criada.</li>
 </ul>
 
-
-
-
-
-
-
-
-
-
+<h2>Como usar</h2>
 Adicionando uma rota:
 
 Para adicionar uma nova rota no seu projeto, siga estes passos:
@@ -72,11 +59,7 @@ Crie um novo arquivo PHP dentro da pasta controllers com o nome do seu controlle
 Declare a classe do seu controller, extendendo a classe base ViewController:
 PHP
 
-<code>
-    class ExemploController extends ViewController{
-        // ...
-    }
-</code>
+<code>class ExemploController extends ViewController{}</code>
 
 Use o código com cuidado.
 content_copy
@@ -91,20 +74,7 @@ content_copy
 Exemplo:
 
 PHP
-<code>
-class ExemploController extends ViewController{
-    public function login()
-    {
-        // Processa a requisição de login
-        // ...
-
-        $dados['titulo'] = "Página de Login";
-        $dados['mensagem'] = "Bem-vindo ao Mini Framework!";
-
-        $this->render('login', $dados);
-    }
-}
-</code>
+<code>class ExemploController extends ViewController{ public function login() { $this->render(); } }</code>
 
 Use o código com cuidado.
 content_copy

@@ -26,7 +26,7 @@ Este projeto teve como princípio o desenvolvimento de uma estrutura básica par
     <li>Rotas: Definição de qual controller deve ser instanciado e qual função deve ser acessada.</li>
     <li>Htaccess: Redirecionamento e reescrita de URL, configurando o APACHE no projeto. Permite o redirecionamento de qualquer URL para o arquivo index.php.</li>
     <li>Reutilização de layout: Criação de um layout padrão para as views, evitando reescrever o mesmo código várias vezes.</li>
-<ul>
+</ul>
 
 
 <h3>Como usar:</h3>

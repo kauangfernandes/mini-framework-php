@@ -79,18 +79,18 @@ Exemplo:
 
 PHP
 <code>
-    class ExemploController extends ViewController{
-        public function login()
-        {
-            // Processa a requisição de login
-            // ...
+class ExemploController extends ViewController{
+    public function login()
+    {
+        // Processa a requisição de login
+        // ...
 
-            $dados['titulo'] = "Página de Login";
-            $dados['mensagem'] = "Bem-vindo ao Mini Framework!";
+        $dados['titulo'] = "Página de Login";
+        $dados['mensagem'] = "Bem-vindo ao Mini Framework!";
 
-            $this->render('login', $dados);
-        }
+        $this->render('login', $dados);
     }
+}
 </code>
 
 Use o código com cuidado.

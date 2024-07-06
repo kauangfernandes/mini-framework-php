@@ -1,4 +1,4 @@
-<h2>Introdução<h2>
+<h2>Introdução</h2>
 
 <p>
     O Mini Framework é um framework PHP leve e básico que facilita o desenvolvimento de aplicações web. 
@@ -32,14 +32,15 @@ Para adicionar uma nova rota no seu projeto, siga estes passos:
 Acesse o arquivo routes.class.php dentro da pasta rotes.
 Localize a função initRoutes().
 Adicione sua nova rota utilizando a sintaxe a seguir:
-PHP
+
+<p>PHP</p><br>
 <code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code>
 
 Use o código com cuidado.
 content_copy
 Exemplo:
 
-PHP
+<p>PHP</p><br>
 <code>$this->getHttp("/rota", [NomeDoController::class, "nomeDaFuncao"]);</code><br>
 <code>$this->getHttp("/login", [ExemploController::class, "login"]);</code><br>
 <code>$this->postHttp("/validar_login", [ExemploController::class, "autenticar"]);</code><br>

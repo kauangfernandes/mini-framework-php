@@ -58,6 +58,7 @@ Para criar um novo controller que tenha a capacidade de renderizar o conteúdo, 
 Crie um novo arquivo PHP dentro da pasta controllers com o nome do seu controller (ex: ExemploController.php).
 Declare a classe do seu controller, extendendo a classe base ViewController:
 PHP
+<<<<<<< HEAD
 
 <code>
     class ExemploController extends ViewController{
@@ -65,19 +66,31 @@ PHP
     }
 </code>
 
+=======
+class ExemploController extends ViewController
+{
+    // ...
+}
+>>>>>>> 24e7d624915fdaf4b17ce6ed78b2fba18b8de4cb
 Use o código com cuidado.
 content_copy
 Implemente as funções do seu controller que serão responsáveis por processar as requisições e retornar o conteúdo a ser renderizado.
 Para renderizar o conteúdo na view, utilize o método render():
+<<<<<<< HEAD
 
 PHP
 <code>$this->render('nomeDaView', ['dados' => $seusDados]);</code>
 
+=======
+PHP
+$this->render('nomeDaView', ['dados' => $seusDados]);
+>>>>>>> 24e7d624915fdaf4b17ce6ed78b2fba18b8de4cb
 Use o código com cuidado.
 content_copy
 Exemplo:
 
 PHP
+<<<<<<< HEAD
 <code>
     class ExemploController extends ViewController{
         public function login()
@@ -93,9 +106,28 @@ PHP
     }
 </code>
 
+=======
+class ExemploController extends ViewController
+{
+    public function login()
+    {
+        // Processa a requisição de login
+        // ...
+
+        $dados['titulo'] = "Página de Login";
+        $dados['mensagem'] = "Bem-vindo ao Mini Framework!";
+
+        $this->render('login', $dados);
+    }
+}
+>>>>>>> 24e7d624915fdaf4b17ce6ed78b2fba18b8de4cb
 Use o código com cuidado.
 content_copy
 Observações:
 
 Nome da View: Utilize o nome do arquivo da view sem a extensão .php (ex: login).
+<<<<<<< HEAD
 Dados: Os dados a serem passados para a view podem ser informados como um array associativo.
+=======
+Dados: Os dados a serem passados para a view podem ser informados como um array associativo.
+>>>>>>> 24e7d624915fdaf4b17ce6ed78b2fba18b8de4cb

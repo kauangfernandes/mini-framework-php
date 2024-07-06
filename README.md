@@ -82,3 +82,9 @@ Observações:
 
 Nome da View: Utilize o nome do arquivo da view sem a extensão .php (ex: login).
 Dados: Os dados a serem passados para a view podem ser informados como um array associativo.
+
+<h3>Link(s):</h3>
+<ul>
+    <li>https://httpd.apache.org/docs/2.2/pt-br/howto/htaccess.html</li>
+    <li>https://developer.mozilla.org/en-US/docs/Glossary/MVC</li>
+</ul>

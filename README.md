@@ -66,7 +66,7 @@ Implemente as funções do seu controller que serão responsáveis por processar
 Para renderizar o conteúdo na view, utilize o método render():
 
 PHP
-<code>$this->render('nomeDaView', ['dados' => $seusDados]);</code>
+<code>$this->render();</code>
 
 Use o código com cuidado.<br>
 Exemplo:

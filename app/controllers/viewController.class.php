@@ -33,61 +33,18 @@
             require_once "../app/views/template/{$this->template}.php";
         }
 
-        public function getTitle(): string{
-            return $this->title;
+        public function __get($attr){
+            return $this->$attr;
         }
 
-        public function setTitle(string $title){
-            $this->title = $title;
+        public function __set(String $attr, $value){
+            if(is_array($this->$attr)){
+                $this->$attr[] = $value;
+            } else {
+                $this->$attr = $value;
+            }
         }
-
-        public function getTemplate(): string{
-            return $this->template;
-        }
-
-        public function setTemplate(string $template){
-            $this->template = $template;
-        }
-
-        public function getPage(): string{
-            return $this->page;
-        }
-
-        public function setPage(string $page){
-            $this->page = $page;
-        }
-
-        public function getCss(): array{
-            return $this->css;
-        }
-
-        public function setCss(string $css){
-            $this->css[] = $css;
-        }
-
-        public function getJs(){
-            return $this->js;
-        }
-
-        public function setJs(array $js){
-            $this->js[] = $js;
-        }
-
-        public function getResults(){
-            return $this->results;
-        }
-
-        public function setResults($results){
-            $this->results = $results;
-        }
-
-        public function getObject(){
-            return $this->object;
-        }
-
-        public function setObject($object){
-            $this->object = $object;
-        }
+        
     }
 
 ?>

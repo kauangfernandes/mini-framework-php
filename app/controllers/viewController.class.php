@@ -33,7 +33,7 @@
             require_once "../app/views/template/{$this->template}.php";
         }
 
-        public function __get($attr){
+        public function __get(String $attr){
             return $this->$attr;
         }
 

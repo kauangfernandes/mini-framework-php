@@ -9,8 +9,8 @@
         }
         
         public function index(){
-            $this->setTitle(title:"Hello word");
-            $this->setPage(page:"index");
+            $this->__set("title", "Hello word");
+            $this->__set("page", "index");
             $this->render();
         }
     }

@@ -1,7 +1,7 @@
 <?php
 
-    class viewController{
-        public function __construct(
+    abstract class viewController{
+        protected function __construct(
             protected string $title = "",
             protected string $nameApp = "Framework",
             protected string $template = "default",
@@ -14,7 +14,7 @@
             $this->object = new \stdClass();
         }
 
-        public function render(){
+        protected function render(){
             if(isset($this->page) AND $this->page != "not_found"){
 
                 $title = $this->title;

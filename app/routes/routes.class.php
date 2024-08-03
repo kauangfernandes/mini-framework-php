@@ -15,12 +15,12 @@
             return $this->routes;
         }
 
-        private function getHttp(string $path, array $dados){
-            $this->routes['GET'][$path] = $dados;
+        private function getHttp(string $path, array $controllerAction){
+            $this->routes['GET'][$path] = $controllerAction;
         }
 
-        private function postHttp(string $path, array $dados){
-            $this->routes['POST'][$path] = $dados;
+        private function postHttp(string $path, array $controllerAction){
+            $this->routes['POST'][$path] = $controllerAction;
         }
 
         private function initRoutes(){

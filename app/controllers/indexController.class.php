@@ -9,7 +9,7 @@
         }
         
         public function index(){
-            $this->__set("title", "Hello word");
+            $this->__set("title", "Hello world");
             $this->__set("page", "index");
             $this->render();
         }

@@ -23,7 +23,5 @@
         public function getServerPortHttp(){
             return $_SERVER['SERVER_PORT'];
         }
-        
     }
-
 ?>

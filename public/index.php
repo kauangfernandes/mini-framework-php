@@ -1,5 +1,5 @@
 <?php 
     require_once "../app/models/autoloader.class.php";
     Autoload::Register();
-    $route = new  Routes;
+    require_once "../app/routes/web.php";
 ?>

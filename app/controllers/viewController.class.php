@@ -1,5 +1,6 @@
 <?php
-
+    namespace App\Controllers;
+    
     abstract class viewController{
         protected function __construct(
             protected string $title = "",

@@ -1,4 +1,5 @@
 <?php
+    namespace App\Routes;
 
     class Route{
 
@@ -21,7 +22,7 @@
         }
 
         private static function runRoutes(){
-            $server = new Server;
+            $server = new \App\Core\Server;
 
             self::$method = $server->getMethodHttp();
             self::$path = $server->getPathHtpp();

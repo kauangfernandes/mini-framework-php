@@ -1,8 +1,8 @@
 <?php
+    require_once "route.class.php";
     //Initial Route.
-    Route::getHttp("/", [indexController::class, "index"]);
-    Route::getHttp("/erro", [indexController::class, "erro"]);
+    App\Routes\Route::getHttp("/", [\App\Controllers\indexController::class, "index"]);
 
 
-    Route::startInstancia();
+    App\Routes\Route::startInstancia();
 ?>

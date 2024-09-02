@@ -1,10 +1,11 @@
 <?php
+    namespace App\Controllers;
 
-    class indexController extends viewController{
+    class indexController extends \App\Controllers\viewController{
         public function __construct(
             private $connection = null
         ){
-            $this->connection = Connection::getInstancia();
+            $this->connection = \App\Core\Connection::getInstancia();
             parent::__construct();
         }
         
@@ -14,5 +15,4 @@
             $this->render();
         }
     }
-
 ?>

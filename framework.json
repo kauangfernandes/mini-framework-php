@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "mapping_directory" : {
+            "\\App": "/app",
+            "\\Library": "/library"
+        }
+    }
+}

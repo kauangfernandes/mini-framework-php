@@ -1,4 +1,6 @@
 <?php
+    namespace App\Core;
+    
     class Server{
         public function __construct(){}
 
@@ -22,6 +24,10 @@
 
         public function getServerPortHttp(){
             return $_SERVER['SERVER_PORT'];
+        }
+
+        public function getDocumentroot(){
+            return $_SERVER['DOCUMENT_ROOT'];
         }
     }
 ?>

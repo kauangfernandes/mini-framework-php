@@ -1,29 +1,25 @@
 <?php
+    namespace Autoload;
+
     class Autoloader {
+        public static array $extencios = array(
+            ".php",
+            ".class.php"
+        );
+
         public static function register(){
             spl_autoload_register(
-                function($className){
+                function($classNameSpace){
 
-                    if(file_exists("../app/controllers/".$className.".class.php")){
-                        require_once  "../app/controllers/" . $className . '.class.php';
-                    }
-                    
-                    if (file_exists("../app/routes/".$className.".class.php")){
-                        require_once  "../app/routes/" . $className . '.class.php';
-                    }
+                    $path = strtolower($classNameSpace);
+                    $path = str_ireplace("\\", "/", $path);
 
-                    if (file_exists("../app/models/server/".$className.".class.php")){
-                        require_once  "../app/models/server/" . $className . '.class.php';
+                    foreach (self::$extencios as $extencao) {
+                        if(file_exists("../{$path}{$extencao}")){
+                            $path = "../{$path}{$extencao}";
+                            require_once $path;
+                        }
                     }
-                    
-                    if(file_exists("../app/models/".$className.".class.php")){
-                        require_once  "../app/models/" . $className . '.class.php';
-                    }
-
-                    if(file_exists("../app/core/".$className.".class.php")){
-                        require_once  "../app/core/" . $className . '.class.php';
-                    }
-                    
                 }
             );
         }

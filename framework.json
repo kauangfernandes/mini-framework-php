@@ -1,8 +1,22 @@
 {
+    "name": "Mini-Framework-PHP",
+    "require": {
+        "php": ">= 7.0"
+    },
+    "authors": [
+        {
+            "name": "Kauan Gomes Fernandes",
+            "homepage": "https://github.com/kauangfernandes"
+        }
+    ],
     "autoload": {
-        "mapping_directory" : {
-            "\\App": "/app",
-            "\\Library": "/library"
+        "mappingDirectory" : {
+            "App\\": "/app",
+            "Library\\": "/library"
+        },
+        "extensions": {
+            "0": ".php",
+            "1": ".class.php"
         }
     }
 }

@@ -47,7 +47,10 @@
         public function setResponse(String $attr, Mixed $value){
             $this->response->$attr = $value;
         }
-        
-    }
 
+        public function redirect(String $route, Array $parametros = null){
+            header("location: {$route}");
+            die();
+        }
+    }
 ?>

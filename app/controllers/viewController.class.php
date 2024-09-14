@@ -9,10 +9,9 @@
             protected string $page = "not_found",
             protected array $css = array("styles"),
             protected array $js = array("index"),
-            protected $results = null,
-            protected $object = null
+            protected $response = null
         ){
-            $this->object = new \stdClass();
+            $this->response = new \stdClass();
         }
 
         protected function render(){
@@ -23,8 +22,7 @@
                 $page = $this->page;
                 $css = $this->css;
                 $js = $this->js;
-                $results = $this->results;
-                $object = $this->object;
+                $response = $this->response;
                 
             } else {
                 $page = "not_found";
@@ -44,6 +42,10 @@
             } else {
                 $this->$attr = $value;
             }
+        }
+
+        public function setResponse(String $attr, Mixed $value){
+            $this->response->$attr = $value;
         }
         
     }

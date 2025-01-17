@@ -10,7 +10,7 @@
 
         public static function register(){
 
-            self::$extensions = self::getextEnsionsJson();
+            self::$extensions = self::getExtensionsJson();
 
             spl_autoload_register(
                 function($classNameSpace){
@@ -30,7 +30,7 @@
             );
         }
 
-        private static function getextEnsionsJson(){
+        private static function getExtensionsJson(){
             try {
                 $baseDir = self::getBaseDir();
                 if(file_exists($baseDir."/framework.json")){
@@ -46,15 +46,15 @@
                             return $extensions;
                         }
                     } else {
-                        echo "Campo [extensions] não esta definido.";
+                        echo "Field [extensions] is not defined.";
                     }
                     
                 } else {
-                    echo "Arquivo framework.json não foi encontrado.";
+                    echo "Framework.json file was not found.";
                 }
             } catch (\Throwable $th) {
-                //throw $th;
-                //echo "Arquivo framework.json não foi encontrado.";
+                throw $th;
+                echo "Framework.json file was not found.";
             }
         }
 

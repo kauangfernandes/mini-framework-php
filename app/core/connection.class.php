@@ -18,7 +18,7 @@
         
                     self::$db = new \PDO($args, $user, $password);
                 } catch (\PDOException $e) {
-                    echo "Erro na conexãor: {$e->getCode()}<br>Mensagem: {$e->getMessage()}";
+                    echo "Connection error: {$e->getCode()}<br>Message: {$e->getMessage()}";
                     die();
                 }
             }

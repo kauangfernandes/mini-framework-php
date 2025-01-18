@@ -25,12 +25,12 @@
             $server = new \App\Core\Server;
 
             self::$method = $server->getMethodHttp();
-            self::$path = $server->getPathHtpp();
+            self::$path = $server->getPathHtppRequest();
 
             if(isset(self::$routes[self::$method][self::$path])){
                 return self::$routes[self::$method][self::$path];
             } else {
-                return exit("Rota não conhecida.");
+                return exit("Unknown route.");
             }
         }
 

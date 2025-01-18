@@ -18,6 +18,14 @@
             return $path;
         }
 
+        public function getPathHtppRequest(){
+            $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+            $path = substr($path, strpos($path, "/", 1));
+            $path_public = __DIR_PUBLIC__ ."/";
+            $path = str_replace($path_public, "", $path);
+            return $path;
+        }
+
         public function getServerNameHttp(){
             return $_SERVER['SERVER_NAME'];
         }

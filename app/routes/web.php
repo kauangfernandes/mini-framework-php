@@ -1,8 +1,8 @@
 <?php
-    require_once "route.class.php";
-    //Initial Route.
-    App\Routes\Route::getHttp("/", [\App\Controllers\indexController::class, "index"]);
+    use Bootstrap\Router\Route;
 
-
-    App\Routes\Route::startInstancia();
+    Route::get("/", [\App\Http\Controllers\IndexController::class, "index"]);
+    Route::get("/hello/world", function () {
+        return printf("Hello/World!");
+    });
 ?>

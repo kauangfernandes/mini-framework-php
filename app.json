@@ -1,0 +1,19 @@
+{
+    "name": "Mini-Framework-PHP",
+    "require": {
+        "php": ">= 7.0"
+    },
+    "authors": [
+        {
+            "name": "Kauan Gomes Fernandes",
+            "homepage": "https://github.com/kauangfernandes"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "App\\": "/app",
+            "Bootstrap\\": "/bootstrap",
+            "Library\\": "/library"
+        }
+    }
+}
